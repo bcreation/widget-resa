@@ -8,6 +8,7 @@ const translationFile = {
     childQtyLabel: 'Enfants',
     ageChildLabel: '(- 12 ans)',
     btnText: 'Envoyer',
+    errorTitle: "Quelque chose s'est mal passé",
   },
   'en-US': {
     widgetTitle: 'Basic widget',
@@ -17,6 +18,7 @@ const translationFile = {
     childQtyLabel: 'Children',
     ageChildLabel: '(- 12 years)',
     btnText: 'Send',
+    errorTitle: 'Something wrong happened',
   },
 }
 

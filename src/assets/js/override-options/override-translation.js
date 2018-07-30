@@ -1,19 +1,26 @@
-import translationFile from '../../widget-translation'
+import translationFile from '../widget-translation'
+import { addTranslation } from '@/lib/globalUtils.js'
 
 // Client words translation
-const overrideTranslate = {
+let overrideTranslate = {
   'fr-FR': {
-    panel: 'Panneaux',
-    widgetTitle: null,
-    btnText: 'Avec animations',
+    tabs: [
+      {
+        label: 'tickets',
+        link: '#TicketingTab',
+      },
+    ],
   },
   'en-US': {
-    panel: 'Panel',
-    widgetTitle: null,
-    btnText: 'With animations',
+    tabs: [
+      {
+        label: 'tickets',
+        link: '#TicketingTab',
+      },
+    ],
   },
 }
 
-Object.assign(overrideTranslate, translationFile)
+addTranslation(overrideTranslate, translationFile)
 
 export { overrideTranslate }

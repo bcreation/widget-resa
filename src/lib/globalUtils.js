@@ -1,7 +1,7 @@
 /**
  * Check if is an empty value
  * @param {any} variable
- * @returns boolean
+ * @return boolean
  */
 function isEmpty(variable) {
   if (!(variable instanceof Date)) {
@@ -18,6 +18,11 @@ function isEmpty(variable) {
   return false
 }
 
+/**
+ * Transform an array ajax response into a json response
+ * @param {Array} data
+ * @return Object
+ */
 function transformResponse(data) {
   if (data.substr(0, 1) === '(') {
     data = data.substr('1', data.length - 2)
@@ -25,4 +30,23 @@ function transformResponse(data) {
   return JSON.parse(data)
 }
 
-export { isEmpty, transformResponse }
+/**
+ * Merge an overirde translation file with the original file
+ * @param {Object} overrideTranslate
+ * @param {Object} translationFile
+ * @returns void
+ */
+function addTranslation(overrideTranslate, translationFile) {
+  // for Each language add the client words object
+  for (let t in translationFile) {
+    for (let k in translationFile[t]) {
+      if (overrideTranslate[t][k] !== undefined) {
+        translationFile[t][k] = overrideTranslate[t][k]
+      }
+    }
+    Object.assign(overrideTranslate[t], translationFile[t])
+    return true
+  }
+  return null
+}
+export { isEmpty, transformResponse, addTranslation }

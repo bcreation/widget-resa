@@ -2,7 +2,7 @@
 import translationFile from './widget-translation'
 export default class DefaultOptions {
   constructor() {
-    this.language = navigator.language || navigator.userLanguage
+    this.language = 'fr-FR'
     this.webservice = null
     this.webserviceQA = null
     this.website = null
@@ -11,9 +11,6 @@ export default class DefaultOptions {
     this.baseWebsiteQA = null
     this.webservices = {}
     this.webservicesQA = {}
-    this.pageProduits = null
-    this.pageDateEvent = null
-    this.widgetType = null
     this.dateMin = new Date()
     this.dateMax = '+12m'
     this.minBookingPeriod = 1
@@ -35,20 +32,7 @@ export default class DefaultOptions {
     this.nbVisitorMax = 10
     this.nbNightMin = 1
     this.nbNightMax = 2
-    this.displayPrice = true
-    this.prefixImage = ''
-    this.suffixImage = ''
-    this.defaultImage = ''
-    this.ticketingUrl = ''
     this.widgetTitle = ''
-    this.displayStartingFrom = false
-    this.paramInit = null
-    this.tabs = [
-      {
-        label: 'tickets',
-        link: '#ticketsComponent',
-      },
-    ]
     this.translation = translationFile
   }
 }
