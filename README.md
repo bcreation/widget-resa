@@ -1,4 +1,4 @@
-# VUE-WidgetJS
+# Widget-Resa
 > A vueJS widget component to create ticketing research widget in Javascript
 
 ## Project setup
